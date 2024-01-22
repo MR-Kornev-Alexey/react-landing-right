@@ -43,6 +43,7 @@ const tiers = [
         price: '8800',
         old: '12700',
         offer: '',
+        offer2: 'рассрочка от  ₽733/месяц',
         linkInvoice: "https://payform.ru/gm3lvUi/",
         description: [
             [2, 'Участие в шестинедельном интенсиве', true, <DoneAllIcon fontSize={"small"}/>],
@@ -62,7 +63,8 @@ const tiers = [
         title: 'Экспертный',
         price: '19900',
         old: '24600',
-        offer: '25 мест',
+        offer: 'осталось 17 мест',
+        offer2: 'рассрочка от  ₽1658/месяц',
         linkInvoice: "https://payform.ru/kw3lvWA/",
         description: [
             [2, 'Участие в шестинедельном интенсиве', true, <DoneAllIcon fontSize={"small"}/>],
@@ -85,6 +87,7 @@ const tiersNext = [
         price: '46000',
         old: '',
         offer: '5 мест',
+        offer2: 'рассрочка от  ₽3833/месяц',
         linkInvoice: "https://payform.ru/oa3l5Xs/",
         description: [
             [2, 'Первичная  часовая консультация от автора с индивидуальным разбором ситуций',<DoneAllIcon fontSize={"small"}/>],
@@ -201,6 +204,12 @@ export default function Pricing() {
                                     }}
                                 />
                                 <CardContent>
+                                    <Typography component="h2"
+                                                variant="h2"
+                                                align="center"
+                                                className={"em-price"}>
+                                        {tier.offer2}
+                                    </Typography>
                                     <Typography component="h2"
                                                 variant="h2"
                                                 align="center"
@@ -325,6 +334,12 @@ export default function Pricing() {
                                     }}
                                 />
                                 <CardContent>
+                                    <Typography component="h2"
+                                                variant="h2"
+                                                align="center"
+                                                className={"em-price"}>
+                                        {tier.offer2}
+                                    </Typography>
                                     <Typography component="h2"
                                                 variant="h2"
                                                 align="center"

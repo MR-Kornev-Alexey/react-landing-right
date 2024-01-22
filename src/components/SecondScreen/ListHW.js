@@ -47,7 +47,7 @@ export default function ComplexGrid() {
 
         {
             id: 5,
-            title: "Находится в возрасте от 0 до трех лет ",
+            title: "Не знает и не понимает границ",
             img: require("../../img/emo-cards/emo-img-1.png")
         }
     ]

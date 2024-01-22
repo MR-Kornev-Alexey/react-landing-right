@@ -15,15 +15,15 @@ export default function FirstScreen() {
                 <Grid item xs={12} md={6}
                       sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
                     <Typography gutterBottom sx={{marginTop:2}} className="top-mainSubTitle">
-                        от 0 до 3 лет
+                        <strong> 6 недельный</strong>&nbsp;курс для малышей<br /><strong>от 5 месяцев до 3 лет&nbsp;</strong>и их родителей
                     </Typography>
                     <Typography className="mainTitle">
-                        Истерики
-                        <br/>
-                        в прошлом
+                        Истерики <br/> в прошлом
+
                     </Typography>
-                    <Typography className="mainSubTitle" >
-                        Как за 6 недель научиться управлять капризами и эмоциями своего ребенка
+
+                    <Typography className="top-mainSubTitle" >
+                        или как управлять эмоциями ребенка
                     </Typography>
                     <Link href={'#price'}>
                         <Button variant="contained" className="btn-pay" sx={{marginTop: 4}}>
@@ -39,7 +39,7 @@ export default function FirstScreen() {
                         alt="Главная картинка"
                         sx={{
                             width: '100%',
-                            maxWidth:300
+                            maxWidth:400
                         }}
                     />
                 </Grid>

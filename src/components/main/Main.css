@@ -37,7 +37,6 @@ body {
 }
 .top-mainSubTitle {
     color: #5c5c5c;
-    font-weight: 600!important;
     text-align: center;
     font-size: 20px!important;
     font-family: 'Lato', sans-serif !important;
@@ -45,6 +44,12 @@ body {
 
 .size-common {
     font-size: 20px!important;
+    color: #5c5c5c!important;
+    font-weight: 500!important;
+    font-family: 'Lato', sans-serif !important;
+}
+.font-size {
+    font-size: 24px!important;
     color: #5c5c5c!important;
     font-weight: 500!important;
     font-family: 'Lato', sans-serif !important;
@@ -159,6 +164,10 @@ body {
     font-family: 'Lato', sans-serif !important;
     color: #5c5c5c!important;
     font-weight: 700!important;
+}
+a {
+    color: #5c5c5c!important;
+    text-decoration: none!important;
 }
 
 .a-price {
@@ -295,7 +304,7 @@ body {
     }
     .cardTitleThree {
        padding: 12px 12px;
-        height: 106px;
+        height: 138px;
     }
     .h5-size {
         font-size: 20px!important;
