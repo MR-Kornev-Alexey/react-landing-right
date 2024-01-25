@@ -38,11 +38,11 @@ const tiers = [
     {
         id: 0,
         title: 'Я сама',
-        price: '9900',
+        price: '8800',
         old: '12700',
         offer: '',
-        offer2: 'рассрочка от  ₽825/месяц',
-        linkInvoice: "https://payform.ru/pc3lZ7n/",
+        offer2: 'рассрочка от  ₽733/месяц',
+        linkInvoice: "https://payform.ru/ja3mckJ/",
         description: [
             [2, 'Участие в шестинедельном интенсиве', true, <DoneAllIcon fontSize={"small"}/>],
             [1, 'Участие в еженедельных семинарах Zoom', true, <DoneAllIcon fontSize={"small"}/>],
@@ -61,9 +61,9 @@ const tiers = [
         title: 'Экспертный',
         price: '24600',
         old: '',
-        offer: 'осталось 14 мест',
-        offer2: 'рассрочка от  ₽1658/месяц',
-        linkInvoice: "https://payform.ru/kw3lvWA/",
+        offer: 'осталось 8 мест',
+        offer2: 'рассрочка от  ₽2200/месяц',
+        linkInvoice: "https://payform.ru/9u3lZvp/",
         description: [
             [2, 'Участие в шестинедельном интенсиве', true, <DoneAllIcon fontSize={"small"}/>],
             [1, 'Участие в еженедельных семинарах Zoom', true, <DoneAllIcon fontSize={"small"}/>],
@@ -84,7 +84,7 @@ const tiersNext = [
         title: 'VIP',
         price: '46000',
         old: '',
-        offer: '5 мест',
+        offer: 'мест нет ',
         offer2: 'рассрочка от  ₽3833/месяц',
         linkInvoice: "https://payform.ru/oa3l5Xs/",
         description: [
@@ -102,14 +102,6 @@ const tiersNext = [
         link: 'dream_bot'
     },
 ];
-
-const invoice = [
-    {
-        id: 0,
-        number: "02-12-23/HW-001"
-
-    }
-]
 
 
 const footers = [
@@ -304,113 +296,112 @@ export default function Pricing() {
                     ))}
                 </Grid>
             </Container>
-            {/*<Container maxWidth="md" component="main" sx={{marginTop: 3}}>*/}
-            {/*    <Grid container spacing={5} alignItems="center" justifyContent="center">*/}
-            {/*        {tiersNext.map((tier) => (*/}
-            {/*            // Enterprise card is full width at sm breakpoint*/}
-            {/*            <Grid*/}
-            {/*                item*/}
-            {/*                key={tier.id}*/}
-            {/*                xs={11}*/}
-            {/*                sm={tier.title === 'Enterprise' ? 12 : 6}*/}
-            {/*                md={6}*/}
+            <Container maxWidth="md" component="main" sx={{marginTop: 3}}>
+                <Grid container spacing={5} alignItems="center" justifyContent="center">
+                    {tiersNext.map((tier) => (
+                        // Enterprise card is full width at sm breakpoint
+                        <Grid
+                            item
+                            key={tier.id}
+                            xs={11}
+                            sm={tier.title === 'Enterprise' ? 12 : 6}
+                            md={6}
 
-            {/*            >*/}
-            {/*                <Card>*/}
-            {/*                    <CardHeader*/}
-            {/*                        title={tier.title}*/}
-            {/*                        subheader={tier.subheader}*/}
-            {/*                        titleTypographyProps={{align: 'center'}}*/}
-            {/*                        action={tier.title === 'Pro' ? <StarIcon/> : null}*/}
-            {/*                        subheaderTypographyProps={{*/}
-            {/*                            align: 'center',*/}
-            {/*                        }}*/}
-            {/*                        sx={{*/}
-            {/*                            backgroundColor: "#5180d3",*/}
-            {/*                            color: "#ffffff",*/}
-            {/*                            textTransform: "uppercase"*/}
-            {/*                        }}*/}
-            {/*                    />*/}
-            {/*                    <CardContent>*/}
-            {/*                        <Typography component="h2"*/}
-            {/*                                    variant="h2"*/}
-            {/*                                    align="center"*/}
-            {/*                                    className={"em-price"}>*/}
-            {/*                            {tier.offer2}*/}
-            {/*                        </Typography>*/}
-            {/*                        <Typography component="h2"*/}
-            {/*                                    variant="h2"*/}
-            {/*                                    align="center"*/}
-            {/*                                    className={"line-offer"}*/}
-            {/*                                    sx={{marginY: 2}}*/}
-            {/*                                     >*/}
-            {/*                            {tier.offer}*/}
-            {/*                        </Typography>*/}
-            {/*                        <Grid container>*/}
-            {/*                            <Grid item md={12} sm={12} xs={12} container>*/}
-            {/*                                {tier.description.map((line) => (*/}
-            {/*                                    <Grid item md={12} sm={12} xs={12} container>*/}
-            {/*                                        <Grid item md={2} sm={2} xs={2}*/}
-            {/*                                              sx={{*/}
-            {/*                                                  display: 'flex',*/}
-            {/*                                                  justifyContent: 'center',*/}
-            {/*                                                  alignItems: 'center'*/}
-            {/*                                              }}>*/}
-            {/*                                            <DoneAllIcon fontSize={"small"}/>*/}
-            {/*                                        </Grid>*/}
-            {/*                                        <Grid item md={10} sm={10} xs={10}>*/}
-            {/*                                            <Typography*/}
-            {/*                                                variant="subtitle1"*/}
-            {/*                                                align="left"*/}
-            {/*                                                key={line[0]}*/}
-            {/*                                                sx={{*/}
-            {/*                                                    display: 'flex',*/}
-            {/*                                                    justifyContent: 'flex-start',*/}
-            {/*                                                    alignItems: 'center'*/}
-            {/*                                                }}*/}
-            {/*                                                className={line[2] ? 'li-price size-common-price' : 'li-price-none size-common-price'}*/}
-            {/*                                            >*/}
-            {/*                                                {line[1]}*/}
-            {/*                                            </Typography>*/}
-            {/*                                        </Grid>*/}
-            {/*                                    </Grid>*/}
-            {/*                                ))}*/}
-            {/*                            </Grid>*/}
-            {/*                        </Grid>*/}
-            {/*                        <Box*/}
-            {/*                            sx={{*/}
-            {/*                                display: 'flex',*/}
-            {/*                                justifyContent: 'center',*/}
-            {/*                                alignItems: 'baseline',*/}
-            {/*                                mb: 2*/}
-            {/*                            }}*/}
-            {/*                        >*/}
-            {/*                            <Typography component="h2"*/}
-            {/*                                        variant="h2"*/}
-            {/*                                        align="center"*/}
-            {/*                                        className={"line-block"}>*/}
-            {/*                                ₽{tier.price}*/}
-            {/*                            </Typography>*/}
-            {/*                        </Box>*/}
-            {/*                    </CardContent>*/}
+                        >
+                            <Card>
+                                <CardHeader
+                                    title={tier.title}
+                                    subheader={tier.subheader}
+                                    titleTypographyProps={{align: 'center'}}
+                                    action={tier.title === 'Pro' ? <StarIcon/> : null}
+                                    subheaderTypographyProps={{
+                                        align: 'center',
+                                    }}
+                                    sx={{
+                                        backgroundColor: "#5180d3",
+                                        color: "#ffffff",
+                                        textTransform: "uppercase"
+                                    }}
+                                />
+                                <CardContent>
+                                    <Typography component="h2"
+                                                variant="h2"
+                                                align="center"
+                                                className={"em-price"}>
+                                        {tier.offer2}
+                                    </Typography>
+                                    <Typography component="h2"
+                                                variant="h2"
+                                                align="center"
+                                                className={"line-offer"}
+                                                sx={{marginY: 2}}
+                                                 >
+                                        {tier.offer}
+                                    </Typography>
+                                    <Grid container>
+                                        <Grid item md={12} sm={12} xs={12} container>
+                                            {tier.description.map((line) => (
+                                                <Grid item md={12} sm={12} xs={12} container>
+                                                    <Grid item md={2} sm={2} xs={2}
+                                                          sx={{
+                                                              display: 'flex',
+                                                              justifyContent: 'center',
+                                                              alignItems: 'center'
+                                                          }}>
+                                                        <DoneAllIcon fontSize={"small"}/>
+                                                    </Grid>
+                                                    <Grid item md={10} sm={10} xs={10}>
+                                                        <Typography
+                                                            variant="subtitle1"
+                                                            align="left"
+                                                            key={line[0]}
+                                                            sx={{
+                                                                display: 'flex',
+                                                                justifyContent: 'flex-start',
+                                                                alignItems: 'center'
+                                                            }}
+                                                            className={line[2] ? 'li-price size-common-price' : 'li-price-none size-common-price'}
+                                                        >
+                                                            {line[1]}
+                                                        </Typography>
+                                                    </Grid>
+                                                </Grid>
+                                            ))}
+                                        </Grid>
+                                    </Grid>
+                                    <Box
+                                        sx={{
+                                            display: 'flex',
+                                            justifyContent: 'center',
+                                            alignItems: 'baseline',
+                                            mb: 2
+                                        }}
+                                    >
+                                        <Typography component="h2"
+                                                    variant="h2"
+                                                    align="center"
+                                                    className={"line-block"}>
+                                            ₽{tier.price}
+                                        </Typography>
+                                    </Box>
+                                </CardContent>
 
-            {/*                    <CardActions className={"box-center"}>*/}
-            {/*                        <Grid container display={"flex"} justifyContent={"center"} alignItems={"center"}>*/}
-            {/*                            <Grid item xs={12} display={"flex"} justifyContent={"center"} alignItems={"center"} className={"em-price"} sx={{ marginY: 1}}>доступна рассрочка </Grid>*/}
-            {/*                            <Grid item xs={12} display={"flex"} justifyContent={"center"} alignItems={"center"}>*/}
-            {/*                                <a href={tier.linkInvoice} className={"a-price"} target={"_blank"}>*/}
-            {/*                                    Купить*/}
-            {/*                                </a>*/}
-            {/*                            </Grid>*/}
-            {/*                        </Grid>*/}
+                                <CardActions className={"box-center"}>
+                                    <Grid container display={"flex"} justifyContent={"center"} alignItems={"center"}>
+                                        <Grid item xs={12} display={"flex"} justifyContent={"center"} alignItems={"center"} className={"em-price"} sx={{ marginY: 1}}>доступна рассрочка </Grid>
+                                        <Grid item xs={12} display={"flex"} justifyContent={"center"} alignItems={"center"}>
+                                            <a href={tier.linkInvoice} className={"a-price"} target={"_blank"}>
+                                                Купить
+                                            </a>
+                                        </Grid>
+                                    </Grid>
 
-            {/*                    </CardActions>*/}
-            {/*                </Card>*/}
-            {/*            </Grid>*/}
-            {/*        ))}*/}
-            {/*    </Grid>*/}
-            {/*</Container>*/}
-            {/* Footer */}
+                                </CardActions>
+                            </Card>
+                        </Grid>
+                    ))}
+                </Grid>
+            </Container>
             <Container sx={{pt: 4, pb: 2}}>
                 <Grid container className={"box-center"}>
                     <Grid item md={6} sm={11} xs={11} display={'flex'} justifyContent={"center"} alignItems={"center"}>
